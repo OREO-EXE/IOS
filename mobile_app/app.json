@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "CampusConnect",
+    "slug": "campusconnect",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0F1118"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.campusconnect.app"
+    },
+    "android": {
+      "package": "com.campusconnect.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#0F1118"
+      }
+    },
+    "plugins": [
+      "expo-font"
+    ]
+  }
+}

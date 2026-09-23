@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#00363f", "primary-fixed": "#e4dfff", "error-container": "#93000a", "on-tertiary": "#2e1e7d", "inverse-primary": "#5a49cb", "secondary": "#45defa", "background": "#11131a", "tertiary-container": "#9084e5", "surface-bright": "#373941", "surface-tint": "#c7bfff", "tertiary-fixed": "#e5deff", "on-primary-fixed-variant": "#422db2", "outline-variant": "#474554", "primary": "#c7bfff", "on-secondary-container": "#004b56", "secondary-fixed-dim": "#3cd8f4", "inverse-on-surface": "#2e3038", "tertiary": "#c7bfff", "inverse-surface": "#e2e2ec", "on-primary-container": "#24008c", "on-tertiary-fixed-variant": "#453894", "on-primary-fixed": "#170065", "secondary-fixed": "#a5eeff", "on-error": "#690005", "on-tertiary-container": "#271576", "on-surface": "#e2e2ec", "on-tertiary-fixed": "#180064", "error": "#ffb4ab", "surface-container-low": "#191b23", "surface-container-high": "#282a31", "surface": "#11131a", "outline": "#928f9f", "secondary-container": "#00c2dd", "surface-container-highest": "#33343c", "primary-container": "#8e7fff", "on-error-container": "#ffdad6", "on-secondary-fixed-variant": "#004e5a", "on-primary": "#2a039d", "on-secondary-fixed": "#001f25", "on-background": "#e2e2ec", "on-surface-variant": "#c8c4d6", "surface-container-lowest": "#0c0e15", "surface-variant": "#33343c", "surface-dim": "#11131a", "surface-container": "#1d1f27", "primary-fixed-dim": "#c7bfff", "tertiary-fixed-dim": "#c7bfff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1.5rem", "gutter-mobile": "0.75rem", "margin-mobile": "1rem", "gutter": "1rem", "space-xl": "2rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem" }, "fontFamily": { "display": ["Manrope"], "headline-md": ["Manrope"], "body-md": ["Inter"], "headline-lg": ["Manrope"], "headline-sm": ["Manrope"], "body-sm": ["Inter"], "label-md": ["Inter"], "body-lg": ["Inter"], "label-sm": ["Inter"], "label-lg": ["Inter"] }, "fontSize": { "display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#11131a;color:#e2e2ec;font-family:Inter,sans-serif;-webkit-font-smoothing:antialiased;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:calc(env(safe-area-inset-bottom, 0px) + 0.5rem);}.pt-safe{padding-top:env(safe-area-inset-top, 0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary/20"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-low/85 backdrop-blur-xl pt-safe"><div class="h-16 px-4 flex items-center justify-between gap-2"><div class="flex items-center gap-2.5 min-w-0 flex-1"><img alt="CampusConnect Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1Xt-GAb92YmOqjyH-ttLpiP7LIh1szftaABcbexQvox1w0hlZq5sXJlT6pTaSgtxQ44V8kCnHPQ6PMMcJHCiWFloZpoCwwMySoBJIEj8ikuPCE6UirIc6I2a2XyUVQyCRgNpCQoqLEAGDrwpvlpnTm57TUeYvscCHuckNL1V85bnYe4kDLMil2vIVuxCLwW2gel5AzB1q5Ib9JXsu--Lq0ILWOH5cQD6StVWiGj3eToGJlbJIH84Yuvtw"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-on-surface truncate">CampusConnect</span><span class="px-1.5 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-sm text-label-sm leading-none shrink-0">Campus OS</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Home Feed</span></div></div><div class="flex items-center gap-1 shrink-0"><button aria-label="Search campus" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface active:bg-surface-container-highest/50 transition-colors relative" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Campus notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface active:bg-surface-container-highest/50 transition-colors relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface-container-low"></span></button><div class="relative ml-1 w-8 h-8 rounded-full p-0.5 bg-gradient-to-tr from-primary-container to-secondary"><img alt="Profile" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtdsN-_b3z3YBPCa6Eh4ro1OlzUF7OPCknMgJCk71hMh4h_qsqrPf3Sid3UxITJcRR2ulDCIbp1JVYHB2LQGhTX1Jseoc5w3tI4FbldNvRnUKBjlh2O2pUVQmnlWSv553CA34LxD57fHidio4QFjUkxt7EcAWUtqlJr_c9pwQPeCgfIFSawXnhATdKwEl22ZBLlhL9k-0no3jRJOW6F6osebzoIsGBuNVxVexlqJNVQtcQydok3NI"/></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-28 bg-surface px-margin-mobile min-h-screen"><div class="flex flex-col w-full pb-10">
+<!-- Top Header Title & Search Section -->
+<div class="flex flex-col gap-2 pt-2 pb-4">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase tracking-wider">Directory 2025</span>
+<div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Winter Quarter</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Find Your Community</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Join 80+ student-led chapters, tech labs, and creative guilds across campus.</p>
+<!-- Search Input & Filter Group -->
+<div class="flex items-center gap-2 mt-2">
+<div class="relative flex-1 flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-[20px] pointer-events-none">search</span>
+<input class="w-full h-12 pl-10 pr-4 rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:bg-surface-container transition-all" placeholder="Search clubs, societies, councils..." type="text"/>
+</div>
+<button aria-label="Filter clubs" class="relative w-12 h-12 shrink-0 rounded-xl bg-surface-container-low flex items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+<span class="absolute top-2 right-2 w-4 h-4 rounded-full bg-secondary text-on-secondary font-label-sm text-[10px] leading-tight flex items-center justify-center font-bold">3</span>
+</button>
+</div>
+</div>
+<!-- Category Filter Pills (Horizontal Scroll) -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 -mx-margin-mobile px-margin-mobile">
+<button class="px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shrink-0 shadow-[0_4px_16px_rgba(142,127,255,0.28)] flex items-center gap-1.5">
+<span>All Clubs</span>
+<span class="px-1.5 py-0.2 rounded-full bg-on-primary/20 text-[10px]">84</span>
+</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md shrink-0 flex items-center gap-1.5 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[16px] text-secondary">memory</span>
+<span>Tech &amp; AI</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container text-secondary font-label-sm text-[10px]">24</span>
+</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md shrink-0 flex items-center gap-1.5 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[16px]">palette</span>
+<span>Creative &amp; Arts</span>
+</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md shrink-0 flex items-center gap-1.5 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[16px]">precision_manufacturing</span>
+<span>Robotics &amp; HW</span>
+</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md shrink-0 flex items-center gap-1.5 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[16px]">rocket_launch</span>
+<span>Entrepreneurship</span>
+</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md shrink-0 flex items-center gap-1.5 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[16px]">public</span>
+<span>Social Impact</span>
+</button>
+</div>
+<!-- Personalized Match Section: Vibe Check -->
+<div class="mt-6 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Clubs You Might Vibe With</h2>
+<span class="text-secondary text-[16px]">✨</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary">Based on Maya's profile</span>
+</div>
+<!-- Highlight Card (Cyber Falcons) -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-low p-4 flex flex-col gap-4 shadow-xl">
+<!-- Glow ambient backdrop effect -->
+<div class="absolute -top-16 -right-16 w-44 h-44 rounded-full bg-primary-container/15 blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-16 -left-16 w-36 h-36 rounded-full bg-secondary/10 blur-xl pointer-events-none"></div>
+<div class="relative flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="relative w-14 h-14 rounded-xl overflow-hidden bg-surface-container-lowest shrink-0 p-0.5 shadow-md">
+<img alt="Cyber Falcons Logo" class="w-full h-full object-cover rounded-[10px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAodSUqmo-ylnI0W3l-H9sy9J_FQtjekucrZqYcklTq9h6wXk1Tks3JZZyXqVLCoULv6I57b-LiP90KjnqqdfmP0-WdSYY_86kAaWZL1-nBq82_i5jlOVYwMU869-7MoaGVMDB3ibndFOq3EblwDGv8-LrhJbi2Eta4afEAQoQyTeobT9w0U_BuNx37Fc4F4ZKwc6gfK5r96XynCp7zNkUDgmN0QLagmbXvZBxditXHMMIk6Rk3OI"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Cyber Falcons</h3>
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Robotics &amp; AI Student Society</p>
+</div>
+</div>
+<!-- 98% Match Badge -->
+<div class="shrink-0 flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-container/20 text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+<span>98% Match</span>
+</div>
+</div>
+<!-- Quick Badges row -->
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-secondary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+          Recruitment Open
+        </span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">group</span>
+          1,420 members
+        </span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">terminal</span>
+          Weekly Hack Nights
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Stanford's premier builder enclave. Building autonomous drones, humanoid sub-systems, and LLM edge controllers in the Packard Lab.
+      </p>
+<!-- Course / Event Glance Pod inside card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-3 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">Next Session</span>
+<span class="font-body-sm text-body-sm text-on-surface">Autonomous Drone Sprint • Fri 6 PM</span>
+</div>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Room 204</span>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-11 rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-1.5 shadow-[0_4px_16px_rgba(142,127,255,0.3)] active:scale-98 transition-all">
+<span>View Society Hub</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="h-11 px-4 rounded-xl bg-surface-container text-on-surface hover:text-secondary font-label-lg text-label-lg flex items-center justify-center gap-1.5 active:scale-95 transition-all" id="falconFollowBtn" onclick="toggleFollow(this)">
+<span class="material-symbols-outlined text-[18px] follow-icon">add</span>
+<span class="follow-text">Join</span>
+</button>
+</div>
+</div>
+</div>
+<!-- "Recruiting This Week" Quick Spotlight Bar -->
+<div class="mt-7 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Recruiting This Week</h2>
+</div>
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">View All (12)</button>
+</div>
+<div class="flex gap-3 overflow-x-auto no-scrollbar -mx-margin-mobile px-margin-mobile py-1">
+<!-- GDSC Mini Spotlight -->
+<div class="w-72 shrink-0 rounded-2xl bg-surface-container-low p-4 flex flex-col justify-between gap-3 shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[24px]">code</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface truncate">GDSC Stanford</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1.8k members</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container/30 text-error font-label-sm text-[10px] font-bold">2 days left</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          Open roles: Lead Web Engineer, Product Designer, Community Organizer.
+        </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-secondary">CS &amp; Design Core</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 active:scale-95 transition-all">
+            Apply Now
+            <span class="material-symbols-outlined text-[14px]">north_east</span>
+</button>
+</div>
+</div>
+<!-- Stanford ACM Mini Spotlight -->
+<div class="w-72 shrink-0 rounded-2xl bg-surface-container-low p-4 flex flex-col justify-between gap-3 shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface truncate">Stanford ACM Chapter</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">2.1k members</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-[10px] font-bold">Mentorship</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          Winter cohort matching with alumni software engineers from DeepMind, Apple, and Figma.
+        </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-primary">Algo &amp; Systems</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 active:scale-95 transition-all">
+            Apply Now
+            <span class="material-symbols-outlined text-[14px]">north_east</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Browse All Clubs Directory List -->
+<div class="mt-7 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Active Campus Chapters</h2>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Sort by</span>
+<button class="text-primary flex items-center gap-0.5 font-semibold">
+          Active <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Club Card 1: Design & Product Guild -->
+<div class="rounded-2xl bg-surface-container-low p-4 flex flex-col gap-3 shadow-md hover:bg-surface-container/60 transition-colors">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-container/30 to-secondary/20 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">draw</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Design &amp; Product Guild</h4>
+<span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary">Design &amp; UI/UX</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">950 members</span>
+</div>
+</div>
+</div>
+<button class="h-9 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 shrink-0 active:scale-95 transition-all" onclick="toggleFollow(this)">
+<span class="material-symbols-outlined text-[16px] follow-icon">add</span>
+<span class="follow-text">Follow</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Bi-weekly critique sessions, design system labs, and prototyping teardowns. Hosting the Annual Campus UXathon.
+      </p>
+<div class="flex items-center justify-between pt-1 font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Active in Studio 4</span>
+</div>
+<div class="flex items-center -space-x-2">
+<img class="w-6 h-6 rounded-full object-cover bg-surface-container" data-alt="Close up student portrait with creative glasses and modern haircut in neon purple studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTpXWgP0lM1kTddRKF0QYWF4PVZhmCXA0p1X3RVLU224TCMF1eZcuKEfKr9vlivNUDK_AyFC6bhYujG6P39_VVFBT-0UOQ3d4vuNxXj4aqd1YjfLpMPMyOb2Yy0Xzqd_LUqnUNEGMJEu08rwilKXYRvUg6Ypq7X6MbmANw3DdOGr1Og8JzYHulfwSdL_Jc35u-Rr9HkF1zCX5rue2spwnH3dz_qB7Sit2DS7B1Qg7Yz7ZJugbFjxM"/>
+<img class="w-6 h-6 rounded-full object-cover bg-surface-container" data-alt="Young female collegiate student smiling with warm natural expression against campus brick background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwZPkoHhNi3lsykWQlMCqrHQJGxmG1vcip-ZwZ6roboNeP4odFU3WbLuRUtcaBE_9J-LDKSSosEAKI34tMnyvAq09ioYdkEO3YyIBHkV-FTmqeurUI_0mMifr2KLE4_K4QRfmo_ydkUa49jx6kIGhcCW9m7h6LKKD9K6AMaSjhSZUMpoFqimeHEzapyw89hcq8pkrODUBRGM6EIkkbjH3gtc-QpfCtuPj5XyjpacWyU_UkwPhxgZQ"/>
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface text-[10px] font-bold">
+            +42
+          </div>
+</div>
+</div>
+</div>
+<!-- Club Card 2: Stanford Autonomous Racing (SAR) -->
+<div class="rounded-2xl bg-surface-container-low p-4 flex flex-col gap-3 shadow-md hover:bg-surface-container/60 transition-colors">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary/30 to-primary-container/20 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[24px]">sports_motorsports</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Autonomous Racing (SAR)</h4>
+<span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-secondary">Hardware &amp; AI</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">410 members</span>
+</div>
+</div>
+</div>
+<button class="h-9 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 shrink-0 active:scale-95 transition-all" onclick="toggleFollow(this)">
+<span class="material-symbols-outlined text-[16px] follow-icon">add</span>
+<span class="follow-text">Follow</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Building Level-4 self-driving electric racecars for the Indy Autonomous Challenge. Lidar SLAM, vehicle dynamics, telemetry.
+      </p>
+<div class="flex items-center justify-between pt-1 font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">handyman</span>
+<span>Hardware Garage Open 24/7</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px]">Sub-teams filling</span>
+</div>
+</div>
+<!-- Club Card 3: E-Cell Startup Incubator -->
+<div class="rounded-2xl bg-surface-container-low p-4 flex flex-col gap-3 shadow-md hover:bg-surface-container/60 transition-colors">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/30 to-surface-bright flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">monetization_on</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">E-Cell Startup Enclave</h4>
+<span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary">Venture &amp; Pitch</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">3.2k members</span>
+</div>
+</div>
+</div>
+<button class="h-9 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 shrink-0 active:scale-95 transition-all" onclick="toggleFollow(this)">
+<span class="material-symbols-outlined text-[16px] follow-icon">add</span>
+<span class="follow-text">Follow</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        $50k non-dilutive grant program, weekend demo sprints, and quarterly pitch showcases for student founders.
+      </p>
+<div class="flex items-center justify-between pt-1 font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">campaign</span>
+<span>Pitch Night applications open</span>
+</div>
+<span class="text-on-surface-variant font-label-sm">Thursdays @ CoHo</span>
+</div>
+</div>
+</div>
+<!-- Bottom CTA Banner: Apply for Charter -->
+<div class="mt-8 rounded-2xl bg-gradient-to-br from-surface-container to-surface-container-low p-5 flex flex-col gap-3 text-center items-center shadow-lg relative overflow-hidden">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary mb-1">
+<span class="material-symbols-outlined text-[26px]">flag</span>
+</div>
+<div class="flex flex-col gap-1 max-w-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Don't see your tribe?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Launch a chapter, reserve lab space, and unlock up to $1,500 in Student Life funding.
+      </p>
+</div>
+<button class="mt-1 px-5 h-10 rounded-xl bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px] text-secondary">add_circle</span>
+      Apply for Campus Charter
+    </button>
+</div>
+</div>
+<script>
+  function toggleFollow(btn) {
+    const icon = btn.querySelector('.follow-icon');
+    const text = btn.querySelector('.follow-text');
+    const isJoined = text.textContent === 'Joined' || text.textContent === 'Following';
+
+    if (!isJoined) {
+      if (text.textContent === 'Join') {
+        text.textContent = 'Joined';
+      } else {
+        text.textContent = 'Following';
+      }
+      icon.textContent = 'check';
+      btn.classList.add('bg-primary-container/20', 'text-primary');
+      btn.classList.remove('bg-surface-container', 'text-on-surface');
+    } else {
+      if (text.textContent === 'Joined') {
+        text.textContent = 'Join';
+      } else {
+        text.textContent = 'Follow';
+      }
+      icon.textContent = 'add';
+      btn.classList.remove('bg-primary-container/20', 'text-primary');
+      btn.classList.add('bg-surface-container', 'text-on-surface');
+    }
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-low/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.45)]" data-active-classes="text-primary-container font-semibold [&amp;_span.material-symbols-outlined]:[font-variation-settings:'FILL'_1]"><div class="flex justify-around items-center h-16 max-w-lg mx-auto px-2"><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-11 text-on-surface-variant transition-colors active:scale-95 duration-150" data-path="home-feed" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-11 text-on-surface-variant transition-colors active:scale-95 duration-150" data-path="explore-campus" href="#"><span class="material-symbols-outlined text-[24px]">explore</span><span class="font-label-sm text-label-sm">Explore</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-11 text-on-surface-variant transition-colors active:scale-95 duration-150" data-path="campus-events" href="#"><span class="material-symbols-outlined text-[24px]">local_activity</span><span class="font-label-sm text-label-sm">Events</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-11 text-on-surface-variant transition-colors active:scale-95 duration-150" data-path="academic-calendar" href="#"><span class="material-symbols-outlined text-[24px]">calendar_today</span><span class="font-label-sm text-label-sm">Calendar</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-11 text-on-surface-variant transition-colors active:scale-95 duration-150" data-path="student-profile" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>

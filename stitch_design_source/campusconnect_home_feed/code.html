@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#00363f", "primary-fixed": "#e4dfff", "error-container": "#93000a", "on-tertiary": "#2e1e7d", "inverse-primary": "#5a49cb", "secondary": "#45defa", "background": "#11131a", "tertiary-container": "#9084e5", "surface-bright": "#373941", "surface-tint": "#c7bfff", "tertiary-fixed": "#e5deff", "on-primary-fixed-variant": "#422db2", "outline-variant": "#474554", "primary": "#c7bfff", "on-secondary-container": "#004b56", "secondary-fixed-dim": "#3cd8f4", "inverse-on-surface": "#2e3038", "tertiary": "#c7bfff", "inverse-surface": "#e2e2ec", "on-primary-container": "#24008c", "on-tertiary-fixed-variant": "#453894", "on-primary-fixed": "#170065", "secondary-fixed": "#a5eeff", "on-error": "#690005", "on-tertiary-container": "#271576", "on-surface": "#e2e2ec", "on-tertiary-fixed": "#180064", "error": "#ffb4ab", "surface-container-low": "#191b23", "surface-container-high": "#282a31", "surface": "#11131a", "outline": "#928f9f", "secondary-container": "#00c2dd", "surface-container-highest": "#33343c", "primary-container": "#8e7fff", "on-error-container": "#ffdad6", "on-secondary-fixed-variant": "#004e5a", "on-primary": "#2a039d", "on-secondary-fixed": "#001f25", "on-background": "#e2e2ec", "on-surface-variant": "#c8c4d6", "surface-container-lowest": "#0c0e15", "surface-variant": "#33343c", "surface-dim": "#11131a", "surface-container": "#1d1f27", "primary-fixed-dim": "#c7bfff", "tertiary-fixed-dim": "#c7bfff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1.5rem", "gutter-mobile": "0.75rem", "margin-mobile": "1rem", "gutter": "1rem", "space-xl": "2rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem" }, "fontFamily": { "display": ["Manrope"], "headline-md": ["Manrope"], "body-md": ["Inter"], "headline-lg": ["Manrope"], "headline-sm": ["Manrope"], "body-sm": ["Inter"], "label-md": ["Inter"], "body-lg": ["Inter"], "label-sm": ["Inter"], "label-lg": ["Inter"] }, "fontSize": { "display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#11131a;color:#e2e2ec;font-family:Inter,sans-serif;-webkit-font-smoothing:antialiased;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:calc(env(safe-area-inset-bottom, 0px) + 0.5rem);}.pt-safe{padding-top:env(safe-area-inset-top, 0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary/20"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-low/85 backdrop-blur-xl pt-safe"><div class="h-16 px-4 flex items-center justify-between gap-2"><div class="flex items-center gap-2.5 min-w-0 flex-1"><img alt="CampusConnect Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1Xt-GAb92YmOqjyH-ttLpiP7LIh1szftaABcbexQvox1w0hlZq5sXJlT6pTaSgtxQ44V8kCnHPQ6PMMcJHCiWFloZpoCwwMySoBJIEj8ikuPCE6UirIc6I2a2XyUVQyCRgNpCQoqLEAGDrwpvlpnTm57TUeYvscCHuckNL1V85bnYe4kDLMil2vIVuxCLwW2gel5AzB1q5Ib9JXsu--Lq0ILWOH5cQD6StVWiGj3eToGJlbJIH84Yuvtw"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-on-surface truncate">CampusConnect</span><span class="px-1.5 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-sm text-label-sm leading-none shrink-0">Campus OS</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Home Feed</span></div></div><div class="flex items-center gap-1 shrink-0"><button aria-label="Search campus" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface active:bg-surface-container-highest/50 transition-colors relative" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Campus notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface active:bg-surface-container-highest/50 transition-colors relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface-container-low"></span></button><div class="relative ml-1 w-8 h-8 rounded-full p-0.5 bg-gradient-to-tr from-primary-container to-secondary"><img alt="Profile" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtdsN-_b3z3YBPCa6Eh4ro1OlzUF7OPCknMgJCk71hMh4h_qsqrPf3Sid3UxITJcRR2ulDCIbp1JVYHB2LQGhTX1Jseoc5w3tI4FbldNvRnUKBjlh2O2pUVQmnlWSv553CA34LxD57fHidio4QFjUkxt7EcAWUtqlJr_c9pwQPeCgfIFSawXnhATdKwEl22ZBLlhL9k-0no3jRJOW6F6osebzoIsGBuNVxVexlqJNVQtcQydok3NI"/></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-28 bg-surface px-margin-mobile min-h-screen"><div class="flex flex-col w-full gap-5 pb-6">
+<!-- 1. GREETING & SEARCH BAR -->
+<section class="flex flex-col gap-3.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Hey, Maya 👋</h1>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Here's what's happening today at Stanford Campus.</p>
+</div>
+<!-- Search Input Bar -->
+<div class="flex items-center gap-2">
+<div class="flex-1 flex items-center h-12 px-3.5 rounded-xl bg-surface-container-low shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0">search</span>
+<input class="w-full bg-transparent px-2.5 text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none" placeholder="Search events, clubs, workshops, venues..." type="text"/>
+<button aria-label="Voice search" class="w-7 h-7 flex items-center justify-center rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">mic</span>
+</button>
+</div>
+<button aria-label="Filter events" class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container-high active:scale-95 transition-all shadow-sm shrink-0" id="filter-toggle-btn" type="button">
+<span class="material-symbols-outlined text-[22px]">tune</span>
+</button>
+</div>
+</section>
+<!-- 2. QUICK DISCOVERY FILTER CHIPS (Horizontal Scrollable) -->
+<section class="relative -mx-margin-mobile px-margin-mobile overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-2 py-0.5 min-w-max">
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+<span>Today</span>
+</button>
+<button class="flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors active:scale-95">
+        This Week
+      </button>
+<button class="flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors active:scale-95">
+<span class="material-symbols-outlined text-secondary text-[16px]">loyalty</span>
+        Free Entry
+      </button>
+<button class="flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors active:scale-95">
+        Hackathons
+      </button>
+<button class="flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors active:scale-95">
+        Certificates
+      </button>
+<button class="flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors active:scale-95">
+        Workshops
+      </button>
+<button class="flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors active:scale-95">
+        Cultural Fest
+      </button>
+<button class="flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors active:scale-95">
+        Sports
+      </button>
+</div>
+</section>
+<!-- 3. CAMPUS PULSE (Live Ticker Widget) -->
+<section class="flex flex-col gap-2 rounded-2xl bg-surface-container-low p-3.5 shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Campus Pulse</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest font-label-sm text-label-sm text-on-surface-variant">Live</span>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="Previous alert" class="w-6 h-6 flex items-center justify-center rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface" id="pulse-prev">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<button aria-label="Next alert" class="w-6 h-6 flex items-center justify-center rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface" id="pulse-next">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Pulsing dynamic alert carousel -->
+<div class="relative overflow-hidden min-h-[52px]">
+<!-- Item 1 -->
+<div class="pulse-card flex items-center justify-between gap-3 p-2.5 rounded-xl bg-surface-container transition-all duration-300" id="pulse-item-0">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[20px]">local_fire_department</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate">AI Hackathon 2025 registrations surging</p>
+<span class="font-body-sm text-body-sm text-secondary truncate">482 students joined in last 3 hours</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] shrink-0">trending_up</span>
+</div>
+<!-- Item 2 (Hidden initially) -->
+<div class="pulse-card hidden flex items-center justify-between gap-3 p-2.5 rounded-xl bg-surface-container transition-all duration-300" id="pulse-item-1">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate">8 seats left for UI/UX Masterclass</p>
+<span class="font-body-sm text-body-sm text-primary truncate">Registration closes in 45 minutes</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] shrink-0">hourglass_top</span>
+</div>
+<!-- Item 3 (Hidden initially) -->
+<div class="pulse-card hidden flex items-center justify-between gap-3 p-2.5 rounded-xl bg-surface-container transition-all duration-300" id="pulse-item-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 text-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">celebration</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate">Robotics Club opened semester recruitments</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Interviews at Robotics Hangar 4</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] shrink-0">arrow_forward</span>
+</div>
+</div>
+</section>
+<!-- 4. FEATURED EVENT HERO CARD -->
+<section class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">stars</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Spotlight Event</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Featured</span>
+</div>
+<!-- The Hero Card -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-low shadow-xl">
+<!-- Image Layer with Scrim -->
+<div class="relative h-44 w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="Futuristic cyber hackathon stage at a collegiate university amphitheater with neon violet and electric cyan ambient backlights, energetic college students coding with laptop stickers, high tech volumetric stage lighting and high-tech displays" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCm4xiByqghiCwImpUIKDewcl8oBRs4zF1qRMlwyd8GhlKOoKZ1jpvN8Tv-mO_kajGxt61ScT-oFRXKpcqgd3l2Qz86ZHAfybSjaeICeB5-N00b15T1iGEQxJZHDXhIPPuP-DxU0qAg66xh0dKlDtLyCAsjM9riBzKLLYU94FR000I1ej5KM4pdSeFXDDZdWTnmbRjU5aeXcU-4h-PgpcFoj41UppzGzP5J4FVlHuDABSWyRbcSNg4')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/60 to-transparent"></div>
+<!-- Top Action / Badges on image -->
+<div class="absolute top-3 inset-x-3 flex items-center justify-between">
+<div class="flex flex-wrap gap-1.5 max-w-[80%]">
+<span class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px]">emoji_events</span>
+              $10,000 Prize Pool
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm">
+              ACM &amp; GDSC Collab
+            </span>
+</div>
+<button aria-label="Bookmark Hackathon" class="w-9 h-9 flex items-center justify-center rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant hover:text-primary active:scale-90 transition-all shadow-sm" id="bookmark-btn">
+<span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+</button>
+</div>
+<!-- Registered Avatars pill inside banner -->
+<div class="absolute bottom-2.5 left-3 flex items-center gap-2 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md">
+<div class="flex -space-x-1.5 overflow-hidden">
+<div class="w-5 h-5 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-sm text-label-sm">A</div>
+<div class="w-5 h-5 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-label-sm">K</div>
+<div class="w-5 h-5 rounded-full bg-surface-bright text-on-surface flex items-center justify-center font-label-sm text-label-sm">M</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">540 Registered</span>
+</div>
+</div>
+<!-- Content Layer -->
+<div class="flex flex-col p-4 gap-3">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">Flagship Campus Competition</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">AI INNOVATION HACKATHON 2025</h3>
+</div>
+<!-- Metadata row -->
+<div class="grid grid-cols-2 gap-2 p-2.5 rounded-xl bg-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">calendar_month</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Date &amp; Duration</span>
+<span class="font-label-md text-label-md text-on-surface">Oct 24 - 26 • 48 Hours</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">location_on</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Venue</span>
+<span class="font-label-md text-label-md text-on-surface truncate">Turing Innovation Hall</span>
+</div>
+</div>
+</div>
+<!-- Action CTA -->
+<button class="w-full h-12 flex items-center justify-center gap-2 rounded-xl bg-primary-container text-on-primary-container font-label-lg text-label-lg shadow-md hover:brightness-110 active:scale-[0.99] transition-all" type="button">
+<span>Explore Event</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 5. "PICKED FOR YOU" (Personalized Match Section) -->
+<section class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">auto_awesome</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Picked for You</h2>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Because you're into AI &amp; ML</p>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-sm text-label-sm font-semibold">92% Match</span>
+</div>
+<!-- Match Card -->
+<div class="flex flex-col p-4 rounded-2xl bg-surface-container-low shadow-sm gap-3">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-start gap-3 min-w-0">
+<div class="w-12 h-12 rounded-xl overflow-hidden shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Digital conceptual artwork of glowing purple neural networks and multi-agent AI brain with modern tech aesthetic on dark matte background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0BXxPq1vwJvxLjZ8Yr09RDvt4aVGPMKEQjzVFU8PpVxRW4T0yC7Zz49JNmw8uP8Po7qJ9JZPhCUgDfldsmOU6V5zEsEbJ4F4fqprSkNBJxVlvmrdBzfOqv9jNxIc1kz1IL5lO2TiE7yHE7n6d_VQ496pU4Gh_L-HvZXCajIYpafGbAo9iwCTG_SYlg4hZRz_31hVjWAylPaLclmX2OVFbLul1ibx7xzi65lrRI4xgmOy0Q66tVRM"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap mb-0.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm">Free Ticket</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">by GDSC</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Generative AI Agent Workshop</h4>
+</div>
+</div>
+<!-- Micro circular match ring -->
+<div class="flex flex-col items-center shrink-0">
+<svg class="w-9 h-9 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="92, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="font-label-sm text-label-sm text-secondary font-bold -mt-6">92%</span>
+</div>
+</div>
+<!-- Details row -->
+<div class="flex items-center justify-between pt-2 border-t border-surface-container/50">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span>Tomorrow, 4:00 PM</span>
+<span class="mx-1">•</span>
+<span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span>
+<span class="truncate">Turing Lab 302</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md active:scale-95 transition-all" type="button">
+          RSVP
+        </button>
+</div>
+</div>
+</section>
+<!-- 6. "FIND YOUR PEOPLE" (Club Discovery Preview) -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Find Your People</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Top student organizations recruiting now</p>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline flex items-center gap-0.5" href="#">
+        See all
+        <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Horizontal Scroll Club Cards -->
+<div class="relative -mx-margin-mobile px-margin-mobile overflow-x-auto no-scrollbar">
+<div class="flex items-stretch gap-3 min-w-max pb-1">
+<!-- Club 1: GDSC -->
+<div class="w-64 flex flex-col justify-between p-3.5 rounded-2xl bg-surface-container-low shadow-sm">
+<div class="flex flex-col gap-2.5">
+<div class="flex items-start justify-between">
+<div class="w-11 h-11 rounded-xl bg-surface-container-high overflow-hidden flex items-center justify-center p-2">
+<img class="w-full h-full object-contain" data-alt="Google Developer Student Club logo stylized in glowing modern campus colors on dark tech surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA11vZRExAafqRuegWH7CK0oZbTADtqjceYBQQjOn2yG5xrGxPyZmukgXHsJM7jGHgo_SD1eF6eENXAX6QEoVD_roYqMswWvDPabXdmSSylrBQ83-zfvCtfb_PaWNSA1PIKtvYukGgbyWj20jKXxkH9zHw99qsw9_Wqqgtbxu--0Zi2eBgiv1FCrXREcAmT_DG7cwi-hVusWcsah2C5RvduWs_pyUjE1J9vwvKCEXIg-s5AXkohOHA"/>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-sm text-label-sm font-semibold">
+                Recruiting now
+              </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Google Developer Student Club</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Tech &amp; Dev • 1.2k members</p>
+</div>
+</div>
+<div class="pt-3 mt-2 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Weekly builds</span>
+<button class="follow-btn px-3.5 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-container transition-all active:scale-95" onclick="toggleFollow(this)" type="button">
+              Follow
+            </button>
+</div>
+</div>
+<!-- Club 2: Cybersecurity & CTF League -->
+<div class="w-64 flex flex-col justify-between p-3.5 rounded-2xl bg-surface-container-low shadow-sm">
+<div class="flex flex-col gap-2.5">
+<div class="flex items-start justify-between">
+<div class="w-11 h-11 rounded-xl bg-surface-container-high overflow-hidden flex items-center justify-center p-2">
+<img class="w-full h-full object-contain" data-alt="Cybersecurity and ethical hacking club emblem with glowing shield matrix and digital lock emblem on dark navy background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAT3Pq2vdtfsFzZzGJ5ogKkJE2ZrxvA_oF7TsYW4FUqEm25siFg2CvdJ2YzRrRYamqPy5g5sDEm5Am1-XZAKQy51PLErMs7_VeQ4i0zOxyfHtIAUdsCPJc83X29r6W1tLZlp3nqkjW_bd-mfvRuAd92XtG3l9e7qVOjo6NAcfdH-jQB2cLe1hm_sKZkKSfMsEhiD3BHWbc87dFd3TIb4OEAr5d-7Hoy_RvH2KZ9eeE9WuL6hgMxX4"/>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary/15 text-primary font-label-sm text-label-sm font-semibold">
+                Active challenges
+              </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Cybersecurity &amp; CTF League</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Security • 640 members</p>
+</div>
+</div>
+<div class="pt-3 mt-2 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">CTF Fri 8PM</span>
+<button class="follow-btn px-3.5 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-container transition-all active:scale-95" onclick="toggleFollow(this)" type="button">
+              Follow
+            </button>
+</div>
+</div>
+<!-- Club 3: Stanford Design Society -->
+<div class="w-64 flex flex-col justify-between p-3.5 rounded-2xl bg-surface-container-low shadow-sm">
+<div class="flex flex-col gap-2.5">
+<div class="flex items-start justify-between">
+<div class="w-11 h-11 rounded-xl bg-surface-container-high overflow-hidden flex items-center justify-center p-2">
+<img class="w-full h-full object-contain" data-alt="Modern creative design society badge with minimal abstract 3d geometric shapes in violet and glassmorphism styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5-e9yT-7sGqSYJDI1XqF40ErIT9tX_uydHfLuLKWPApe8J565G0Zfv5hJeITALFkqi_A_SqjnWCQmcxsmM1i0w7K6UVwDAOexKchYhU8XeeZvJYEriE-nUAaXxQL_HdQvbud18xMOp_WsG5vhzmhIkOVmFui7RP6JP8HwGeGqyRgUQjJjd43RFeDci240hxobpSswNlvgd9jBjbe3WpkgLmujOBfj0jaNSd8g9T-vGfEXFcAIHN8"/>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-medium">
+                Portfolio Crit
+              </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Stanford Design Society</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Design &amp; UI • 890 members</p>
+</div>
+</div>
+<div class="pt-3 mt-2 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bi-weekly sprints</span>
+<button class="follow-btn px-3.5 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-container transition-all active:scale-95" onclick="toggleFollow(this)" type="button">
+              Follow
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Campus Pulse Ticker Rotation
+  let currentPulseIndex = 0;
+  const pulseItems = [
+    document.getElementById('pulse-item-0'),
+    document.getElementById('pulse-item-1'),
+    document.getElementById('pulse-item-2')
+  ];
+
+  function showPulseItem(index) {
+    pulseItems.forEach((el, i) => {
+      if (i === index) {
+        el.classList.remove('hidden');
+      } else {
+        el.classList.add('hidden');
+      }
+    });
+  }
+
+  document.getElementById('pulse-next')?.addEventListener('click', () => {
+    currentPulseIndex = (currentPulseIndex + 1) % pulseItems.length;
+    showPulseItem(currentPulseIndex);
+  });
+
+  document.getElementById('pulse-prev')?.addEventListener('click', () => {
+    currentPulseIndex = (currentPulseIndex - 1 + pulseItems.length) % pulseItems.length;
+    showPulseItem(currentPulseIndex);
+  });
+
+  // Auto advance pulse every 4 seconds
+  setInterval(() => {
+    currentPulseIndex = (currentPulseIndex + 1) % pulseItems.length;
+    showPulseItem(currentPulseIndex);
+  }, 4000);
+
+  // Bookmark Toggle Micro-interaction
+  const bookmarkBtn = document.getElementById('bookmark-btn');
+  let isBookmarked = false;
+  if (bookmarkBtn) {
+    bookmarkBtn.addEventListener('click', () => {
+      isBookmarked = !isBookmarked;
+      const icon = bookmarkBtn.querySelector('span');
+      if (isBookmarked) {
+        icon.textContent = 'bookmark';
+        icon.style.fontVariationSettings = "'FILL' 1";
+        bookmarkBtn.classList.add('text-primary');
+        bookmarkBtn.classList.remove('text-on-surface-variant');
+      } else {
+        icon.textContent = 'bookmark_border';
+        icon.style.fontVariationSettings = "'FILL' 0";
+        bookmarkBtn.classList.remove('text-primary');
+        bookmarkBtn.classList.add('text-on-surface-variant');
+      }
+    });
+  }
+
+  // Follow Button Toggle Micro-interaction
+  window.toggleFollow = function(btn) {
+    if (btn.innerText.trim() === 'Follow') {
+      btn.innerText = 'Following';
+      btn.classList.add('bg-primary', 'text-on-primary');
+      btn.classList.remove('bg-surface-container-high', 'text-on-surface');
+    } else {
+      btn.innerText = 'Follow';
+      btn.classList.remove('bg-primary', 'text-on-primary');
+      btn.classList.add('bg-surface-container-high', 'text-on-surface');
+    }
+  };
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-low/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.45)]" data-active-classes="text-primary-container font-semibold [&amp;_span.material-symbols-outlined]:[font-variation-settings:'FILL'_1]"><div class="flex justify-around items-center h-16 max-w-lg mx-auto px-2"><a aria-current="page" class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-11 transition-colors active:scale-95 duration-150 text-primary-container font-semibold [&amp;_span.material-symbols-outlined]:[font-variation-settings:'FILL'_1]" data-path="home-feed" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-11 text-on-surface-variant transition-colors active:scale-95 duration-150" data-path="explore-campus" href="#"><span class="material-symbols-outlined text-[24px]">explore</span><span class="font-label-sm text-label-sm">Explore</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-11 text-on-surface-variant transition-colors active:scale-95 duration-150" data-path="campus-events" href="#"><span class="material-symbols-outlined text-[24px]">local_activity</span><span class="font-label-sm text-label-sm">Events</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-11 text-on-surface-variant transition-colors active:scale-95 duration-150" data-path="academic-calendar" href="#"><span class="material-symbols-outlined text-[24px]">calendar_today</span><span class="font-label-sm text-label-sm">Calendar</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-11 text-on-surface-variant transition-colors active:scale-95 duration-150" data-path="student-profile" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>
