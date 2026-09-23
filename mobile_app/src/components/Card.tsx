@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { NocturneTheme } from '../constants/theme';
 
-export const Card = ({ children, style }) => (
+export const Card = ({ children, style }: any) => (
   <View style={[styles.card, style]}>
     {children}
   </View>

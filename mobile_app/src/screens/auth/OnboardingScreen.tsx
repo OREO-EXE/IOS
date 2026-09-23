@@ -10,9 +10,9 @@ import {
   Dimensions,
   Animated,
 } from 'react-native';
-import { NocturneTheme } from '../constants/theme';
+import { NocturneTheme } from '../../constants/theme';
 import { useNavigation } from '@react-navigation/native';
-import { RootStackParamList } from '../navigation/AuthStack';
+import { RootStackParamList } from '../../navigation/AuthStack';
 import { StackNavigationProp } from '@react-navigation/stack';
 
 const { width } = Dimensions.get('window');
@@ -352,7 +352,6 @@ const styles = StyleSheet.create({
     borderRadius: 75,
     backgroundColor: NocturneTheme.colors.primary,
     opacity: 0.1,
-    blurRadius: 50,
   },
   auraBottomRight: {
     position: 'absolute',
@@ -363,7 +362,6 @@ const styles = StyleSheet.create({
     borderRadius: 75,
     backgroundColor: NocturneTheme.colors.secondary,
     opacity: 0.1,
-    blurRadius: 50,
   },
   cardStack: {
     width: '90%',
@@ -447,11 +445,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 12,
-  },
-  cardHeaderLeft: {
-    flexDirection: 'row',
-    gap: 10,
-    alignItems: 'center',
   },
   cardIconBgLarge: {
     width: 40,

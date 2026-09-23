@@ -13,5 +13,5 @@
       "@/*": ["src/*"]
     }
   },
-  "extends": "@expo/tsconfig/tsconfig.base"
+  "extends": "expo/tsconfig.base"
 }

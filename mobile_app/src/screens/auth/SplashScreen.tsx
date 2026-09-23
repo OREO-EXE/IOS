@@ -9,9 +9,9 @@ import {
   SafeAreaView,
   StatusBar
 } from 'react-native';
-import { NocturneTheme } from '../constants/theme';
+import { NocturneTheme } from '../../constants/theme';
 import { useNavigation } from '@react-navigation/native';
-import { RootStackParamList } from '../navigation/AuthStack';
+import { RootStackParamList } from '../../navigation/AuthStack';
 import { StackNavigationProp } from '@react-navigation/stack';
 
 const { width, height } = Dimensions.get('window');
@@ -211,7 +211,6 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     backgroundColor: NocturneTheme.colors.primary,
     opacity: 0.15,
-    blurRadius: 40,
   },
   shieldRing: {
     width: 144,

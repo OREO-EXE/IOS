@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 import { NocturneTheme } from '../constants/theme';
 
-export const Button = ({ onPress, title, variant = 'primary', style }) => (
+export const Button = ({ onPress, title, variant = 'primary', style }: any) => (
   <TouchableOpacity
     onPress={onPress}
     style={[

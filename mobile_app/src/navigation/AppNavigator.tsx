@@ -4,50 +4,38 @@ import { AuthStack } from './AuthStack';
 import { MainTabNavigator } from './MainTabs';
 import { OrganizerStack } from './OrganizerStack';
 
-// Placeholder screens for the skeleton
-import { View, Text } from 'react-native';
-const Placeholder = ({ name }: { name: string }) => (
-  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#0F1118' }}>
-    <Text style={{ color: '#F5F6FA' }}>{name} Screen</Text>
-  </View>
-);
+import { SplashScreen } from '../screens/auth/SplashScreen';
+import { OnboardingScreen } from '../screens/auth/OnboardingScreen';
+import VerificationScreen from '../screens/auth/VerificationScreen';
+import InterestsScreen from '../screens/auth/InterestsScreen';
+
+import HomeFeedScreen from '../screens/main/HomeFeedScreen';
+import EventsFeedScreen from '../screens/main/EventsFeedScreen';
+import ClubsDiscoveryScreen from '../screens/main/ClubsDiscoveryScreen';
+import CalendarScreen from '../screens/main/CalendarScreen';
+import StudentProfileScreen from '../screens/main/StudentProfileScreen';
 
 export const AppNavigator = () => {
-  // In the final app, this will be driven by the Zustand auth store
-  const isAuthenticated = false;
-  const userRole = 'student'; // 'student' | 'organizer'
-
   return (
     <NavigationContainer>
-      {/*
-        Navigation skeleton based on the user flow:
-        Splash -> Onboarding -> Verification -> Interests -> Main/Organizer
-      */}
-      {!isAuthenticated ? (
-        <AuthStack.Navigator screenOptions={{ headerShown: false }}>
-          <AuthStack.Screen name="Splash" component={() => <Placeholder name="Splash" />} />
-          <AuthStack.Screen name="Onboarding" component={() => <Placeholder name="Onboarding" />} />
-          <AuthStack.Screen name="Verification" component={() => <Placeholder name="Verification" />} />
-          <AuthStack.Screen name="Interests" component={() => <Placeholder name="Interests" />} />
-          <AuthStack.Screen name="StudentProfile" component={() => <Placeholder name="Student Profile" />} />
-        </AuthStack.Navigator>
-      ) : (
-        userRole === 'student' ? (
-          <MainTabNavigator.Navigator screenOptions={{ headerShown: false }}>
-            <MainTabNavigator.Screen name="Home" component={() => <Placeholder name="Home" />} />
-            <MainTabNavigator.Screen name="Events" component={() => <Placeholder name="Events" />} />
-            <MainTabNavigator.Screen name="Clubs" component={() => <Placeholder name="Clubs" />} />
-            <MainTabNavigator.Screen name="Calendar" component={() => <Placeholder name="Calendar" />} />
-            <MainTabNavigator.Screen name="Profile" component={() => <Placeholder name="Profile" />} />
-          </MainTabNavigator.Navigator>
-        ) : (
-          <OrganizerStack.Navigator screenOptions={{ headerShown: false }}>
-            <OrganizerStack.Screen name="Dashboard" component={() => <Placeholder name="Dashboard" />} />
-            <OrganizerStack.Screen name="EventManagement" component={() => <Placeholder name="EventManagement" />} />
-            <OrganizerStack.Screen name="QRScanner" component={() => <Placeholder name="QRScanner" />} />
-          </OrganizerStack.Navigator>
-        )
-      )}
+      <AuthStack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Splash">
+        <AuthStack.Screen name="Splash" component={SplashScreen} />
+        <AuthStack.Screen name="Onboarding" component={OnboardingScreen} />
+        <AuthStack.Screen name="Verification" component={VerificationScreen} />
+        <AuthStack.Screen name="Interests" component={InterestsScreen} />
+        <AuthStack.Screen name="MainApp" component={MainAppTabs} />
+        <AuthStack.Screen name="StudentProfile" component={StudentProfileScreen} />
+      </AuthStack.Navigator>
     </NavigationContainer>
   );
 };
+
+const MainAppTabs = () => (
+  <MainTabNavigator.Navigator screenOptions={{ headerShown: false, tabBarStyle: { backgroundColor: '#1E2029', borderTopColor: '#2D303E' }, tabBarActiveTintColor: '#6C5CE7', tabBarInactiveTintColor: '#8F92A1' }}>
+    <MainTabNavigator.Screen name="Home" component={HomeFeedScreen} />
+    <MainTabNavigator.Screen name="Events" component={EventsFeedScreen} />
+    <MainTabNavigator.Screen name="Clubs" component={ClubsDiscoveryScreen} />
+    <MainTabNavigator.Screen name="Calendar" component={CalendarScreen} />
+    <MainTabNavigator.Screen name="Profile" component={StudentProfileScreen} />
+  </MainTabNavigator.Navigator>
+);

@@ -9,6 +9,7 @@ export type RootStackParamList = {
   ProfileSetup: undefined;
   MainApp: undefined;
   OrganizerApp: undefined;
+  StudentProfile: undefined;
 };
 
 export const AuthStack = createStackNavigator<RootStackParamList>();
