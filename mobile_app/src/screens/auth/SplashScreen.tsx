@@ -111,7 +111,7 @@ export const SplashScreen = () => {
 
           <TouchableOpacity
             style={styles.secondaryButton}
-            onPress={() => {}}
+            onPress={() => navigation.navigate('Login')}
           >
             <Text style={styles.secondaryButtonText}>I already have an account · Log in</Text>
           </TouchableOpacity>

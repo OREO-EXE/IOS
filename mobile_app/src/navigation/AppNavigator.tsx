@@ -19,11 +19,14 @@ import EventDetailsScreen from '../screens/main/EventDetailsScreen';
 import EventPassScreen from '../screens/main/EventPassScreen';
 import SettingsScreen from '../screens/main/SettingsScreen';
 
+import LoginScreen from '../screens/auth/LoginScreen';
+
 export const AppNavigator = () => {
   return (
     <NavigationContainer>
       <AuthStack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Splash">
         <AuthStack.Screen name="Splash" component={SplashScreen} />
+        <AuthStack.Screen name="Login" component={LoginScreen} />
         <AuthStack.Screen name="Onboarding" component={OnboardingScreen} />
         <AuthStack.Screen name="Verification" component={VerificationScreen} />
         <AuthStack.Screen name="Interests" component={InterestsScreen} />
