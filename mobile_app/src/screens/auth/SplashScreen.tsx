@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
     backgroundColor: NocturneTheme.colors.background,
   },
   backgroundContainer: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     zIndex: -1,
   },
   glowOrb: {
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
     backgroundColor: NocturneTheme.colors.primary,
   },
   constellationLayer: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     opacity: 0.3,
   },
   content: {

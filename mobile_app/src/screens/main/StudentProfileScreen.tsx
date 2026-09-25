@@ -1,15 +1,26 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useNavigation } from '@react-navigation/native';
+import { demoUser } from '../../data/demoData';
+
+import { Ionicons } from '@expo/vector-icons';
 
 export default function StudentProfileScreen() {
+  const navigation = useNavigation<any>();
+  
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.header}>Profile</Text>
+      <View style={styles.headerRow}>
+        <Text style={styles.header}>Profile</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
+          <Ionicons name="settings-outline" size={28} color="#F5F6FA" />
+        </TouchableOpacity>
+      </View>
       <View style={styles.profileCard}>
-        <View style={styles.avatarPlaceholder} />
-        <Text style={styles.name}>Student Name</Text>
-        <Text style={styles.campus}>Campus University</Text>
+        <Image source={{ uri: demoUser.avatar }} style={styles.avatar} />
+        <Text style={styles.name}>{demoUser.name}</Text>
+        <Text style={styles.campus}>{demoUser.university}</Text>
       </View>
       
       <View style={styles.statsContainer}>
@@ -27,7 +38,10 @@ export default function StudentProfileScreen() {
         </View>
       </View>
 
-      <TouchableOpacity style={styles.logoutButton}>
+      <TouchableOpacity 
+        style={styles.logoutButton}
+        onPress={() => navigation.reset({ index: 0, routes: [{ name: 'Splash' }] })}
+      >
         <Text style={styles.logoutText}>Logout</Text>
       </TouchableOpacity>
     </SafeAreaView>
@@ -36,9 +50,10 @@ export default function StudentProfileScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#0F1118', padding: 16 },
-  header: { fontSize: 28, fontWeight: 'bold', color: '#F5F6FA', marginBottom: 20 },
+  headerRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 },
+  header: { fontSize: 28, fontWeight: 'bold', color: '#F5F6FA' },
   profileCard: { alignItems: 'center', marginBottom: 30 },
-  avatarPlaceholder: { width: 100, height: 100, borderRadius: 50, backgroundColor: '#6C5CE7', marginBottom: 16 },
+  avatar: { width: 100, height: 100, borderRadius: 50, marginBottom: 16 },
   name: { fontSize: 24, fontWeight: 'bold', color: '#F5F6FA' },
   campus: { fontSize: 16, color: '#8F92A1', marginTop: 4 },
   statsContainer: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 40 },

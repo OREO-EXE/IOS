@@ -1,43 +1,32 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, FlatList, ActivityIndicator } from 'react-native';
+import React from 'react';
+import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useNavigation } from '@react-navigation/native';
+import { demoEvents } from '../../data/demoData';
 
 export default function EventsFeedScreen() {
-  const [events, setEvents] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch('http://10.0.2.2:3000/api/events')
-      .then(res => res.json())
-      .then(data => {
-        setEvents(data);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error(err);
-        setLoading(false);
-      });
-  }, []);
+  const navigation = useNavigation<any>();
 
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.header}>Upcoming Events</Text>
-      {loading ? (
-        <ActivityIndicator size="large" color="#00B894" style={{ marginTop: 50 }} />
-      ) : (
-        <FlatList
-          data={events}
-          keyExtractor={(item: any) => item.id?.toString() || Math.random().toString()}
-          ListEmptyComponent={<Text style={styles.emptyText}>No upcoming events</Text>}
-          renderItem={({ item }: any) => (
-            <View style={styles.card}>
-              <Text style={styles.cardTitle}>{item.title || 'Event'}</Text>
-              <Text style={styles.cardMeta}>{item.date} • {item.location}</Text>
-            </View>
-          )}
-          contentContainerStyle={{ paddingBottom: 20 }}
-        />
-      )}
+      <FlatList
+        data={demoEvents}
+        keyExtractor={(item: any) => item.id}
+        ListEmptyComponent={<Text style={styles.emptyText}>No upcoming events</Text>}
+        renderItem={({ item }: any) => (
+          <TouchableOpacity 
+            style={styles.card} 
+            activeOpacity={0.8}
+            onPress={() => navigation.navigate('EventDetails', { event: item })}
+          >
+            <Text style={styles.cardTitle}>{item.title}</Text>
+            <Text style={styles.cardDesc} numberOfLines={2}>{item.description}</Text>
+            <Text style={styles.cardMeta}>{new Date(item.date).toDateString()} • {item.location}</Text>
+          </TouchableOpacity>
+        )}
+        contentContainerStyle={{ paddingBottom: 20 }}
+      />
     </SafeAreaView>
   );
 }
@@ -54,6 +43,7 @@ const styles = StyleSheet.create({
     borderLeftColor: '#00B894'
   },
   cardTitle: { fontSize: 18, fontWeight: '600', color: '#F5F6FA', marginBottom: 8 },
+  cardDesc: { fontSize: 14, color: '#8F92A1', marginBottom: 12 },
   cardMeta: { fontSize: 14, color: '#8F92A1', fontWeight: '500' },
   emptyText: { color: '#8F92A1', textAlign: 'center', marginTop: 40 }
 });

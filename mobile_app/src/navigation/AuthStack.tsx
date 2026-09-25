@@ -10,6 +10,9 @@ export type RootStackParamList = {
   MainApp: undefined;
   OrganizerApp: undefined;
   StudentProfile: undefined;
+  EventDetails: { event: any };
+  EventPass: { event: any };
+  Settings: undefined;
 };
 
 export const AuthStack = createStackNavigator<RootStackParamList>();

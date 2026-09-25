@@ -1,46 +1,36 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, FlatList, ActivityIndicator, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, FlatList, TouchableOpacity, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { demoClubs } from '../../data/demoData';
 
 export default function ClubsDiscoveryScreen() {
-  const [clubs, setClubs] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [clubs, setClubs] = useState(demoClubs);
 
-  useEffect(() => {
-    fetch('http://10.0.2.2:3000/api/clubs')
-      .then(res => res.json())
-      .then(data => {
-        setClubs(data);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error(err);
-        setLoading(false);
-      });
-  }, []);
+  const toggleJoin = (id: string) => {
+    setClubs(clubs.map(c => c.id === id ? { ...c, joined: !c.joined } : c));
+  };
 
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.header}>Discover Clubs</Text>
-      {loading ? (
-        <ActivityIndicator size="large" color="#0984E3" style={{ marginTop: 50 }} />
-      ) : (
-        <FlatList
-          data={clubs}
-          numColumns={2}
-          keyExtractor={(item: any) => item.id?.toString() || Math.random().toString()}
-          ListEmptyComponent={<Text style={styles.emptyText}>No clubs available yet.</Text>}
-          renderItem={({ item }: any) => (
-            <TouchableOpacity style={styles.card}>
-              <View style={styles.iconPlaceholder} />
-              <Text style={styles.cardTitle}>{item.name}</Text>
-              <Text style={styles.cardDesc} numberOfLines={2}>{item.description}</Text>
-            </TouchableOpacity>
-          )}
-          columnWrapperStyle={{ justifyContent: 'space-between' }}
-          contentContainerStyle={{ paddingBottom: 20 }}
-        />
-      )}
+      <FlatList
+        data={clubs}
+        numColumns={2}
+        keyExtractor={(item: any) => item.id}
+        ListEmptyComponent={<Text style={styles.emptyText}>No clubs available yet.</Text>}
+        renderItem={({ item }: any) => (
+          <TouchableOpacity style={styles.card} activeOpacity={0.8} onPress={() => toggleJoin(item.id)}>
+            <Image source={{ uri: item.image }} style={styles.clubImage} />
+            <Text style={styles.cardTitle}>{item.name}</Text>
+            <Text style={styles.cardDesc} numberOfLines={2}>{item.description}</Text>
+            <View style={[styles.joinBadge, item.joined && styles.joinedBadge]}>
+              <Text style={styles.joinText}>{item.joined ? 'Joined' : 'Join'}</Text>
+            </View>
+          </TouchableOpacity>
+        )}
+        columnWrapperStyle={{ justifyContent: 'space-between' }}
+        contentContainerStyle={{ paddingBottom: 20 }}
+      />
     </SafeAreaView>
   );
 }
@@ -58,13 +48,26 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#2D303E'
   },
-  iconPlaceholder: {
-    width: 48,
-    height: 48,
-    borderRadius: 24,
-    backgroundColor: '#0984E3',
+  clubImage: {
+    width: 60,
+    height: 60,
+    borderRadius: 30,
     marginBottom: 12,
-    opacity: 0.8
+  },
+  joinBadge: {
+    marginTop: 8,
+    paddingVertical: 4,
+    paddingHorizontal: 12,
+    borderRadius: 12,
+    backgroundColor: '#2D303E',
+  },
+  joinedBadge: {
+    backgroundColor: '#0984E3',
+  },
+  joinText: {
+    color: '#F5F6FA',
+    fontSize: 12,
+    fontWeight: '600'
   },
   cardTitle: { fontSize: 16, fontWeight: '600', color: '#F5F6FA', marginBottom: 8, textAlign: 'center' },
   cardDesc: { fontSize: 12, color: '#8F92A1', textAlign: 'center' },

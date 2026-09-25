@@ -1,44 +1,31 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, FlatList, ActivityIndicator } from 'react-native';
+import React from 'react';
+import { View, Text, StyleSheet, FlatList, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { demoFeed } from '../../data/demoData';
 
 export default function HomeFeedScreen() {
-  const [events, setEvents] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch('http://10.0.2.2:3000/api/events')
-      .then(res => res.json())
-      .then(data => {
-        setEvents(data);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error(err);
-        setLoading(false);
-      });
-  }, []);
-
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.header}>CampusFeed</Text>
-      {loading ? (
-        <ActivityIndicator size="large" color="#6C5CE7" style={{ marginTop: 50 }} />
-      ) : (
-        <FlatList
-          data={events}
-          keyExtractor={(item: any) => item.id?.toString() || Math.random().toString()}
-          ListEmptyComponent={<Text style={styles.emptyText}>No events right now!</Text>}
-          renderItem={({ item }: any) => (
-            <View style={styles.card}>
-              <Text style={styles.cardTitle}>{item.title || 'Untitled Event'}</Text>
-              <Text style={styles.cardDesc}>{item.description || 'No description'}</Text>
-              <Text style={styles.cardMeta}>{item.date} • {item.location}</Text>
+      <FlatList
+        data={demoFeed}
+        keyExtractor={(item: any) => item.id}
+        ListEmptyComponent={<Text style={styles.emptyText}>No posts right now!</Text>}
+        renderItem={({ item }: any) => (
+          <View style={styles.card}>
+            <View style={styles.authorContainer}>
+              <Image source={{ uri: item.author.avatar }} style={styles.avatar} />
+              <View>
+                <Text style={styles.authorName}>{item.author.name}</Text>
+                <Text style={styles.timestamp}>{item.timestamp}</Text>
+              </View>
             </View>
-          )}
-          contentContainerStyle={{ paddingBottom: 20 }}
-        />
-      )}
+            <Text style={styles.cardDesc}>{item.content}</Text>
+            <Text style={styles.cardMeta}>{item.likes} Likes • {item.comments} Comments</Text>
+          </View>
+        )}
+        contentContainerStyle={{ paddingBottom: 20 }}
+      />
     </SafeAreaView>
   );
 }
@@ -57,5 +44,9 @@ const styles = StyleSheet.create({
   cardTitle: { fontSize: 18, fontWeight: '600', color: '#F5F6FA', marginBottom: 8 },
   cardDesc: { fontSize: 14, color: '#8F92A1', marginBottom: 12 },
   cardMeta: { fontSize: 12, color: '#6C5CE7', fontWeight: '500' },
-  emptyText: { color: '#8F92A1', textAlign: 'center', marginTop: 40 }
+  emptyText: { color: '#8F92A1', textAlign: 'center', marginTop: 40 },
+  authorContainer: { flexDirection: 'row', alignItems: 'center', marginBottom: 12 },
+  avatar: { width: 40, height: 40, borderRadius: 20, marginRight: 12 },
+  authorName: { color: '#F5F6FA', fontSize: 16, fontWeight: '600' },
+  timestamp: { color: '#8F92A1', fontSize: 12, marginTop: 2 }
 });
